@@ -13,7 +13,12 @@ Wrap ruby characters (e.g. furigana, Pinyin, Zhuyin) in text with the
 ```ruby
 a = Agate::Parser.new("勉【べん】強【きょう】します")
 a.parse
-=> <ruby>勉<rt>べん</rt></ruby><ruby>強<rt>きょう</rt></ruby>します
+```
+
+becomes
+
+```html
+<ruby>勉<rt>べん</rt></ruby><ruby>強<rt>きょう</rt></ruby>します
 ```
 
 [HTML `ruby` element]: http://www.w3.org/TR/html5/text-level-semantics.html#the-ruby-element
