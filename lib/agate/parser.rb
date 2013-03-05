@@ -7,9 +7,6 @@ module Agate
       :formatter  => :html
     }
 
-    # Regexp reserved characters to escape when matching
-    RESERVED = ["(", ")", "[", "]", "{", "}", ".", ",", "+", "*"]
-
     def initialize(options = {})
       @options = DEFAULTS.merge(options)
 
@@ -23,11 +20,8 @@ module Agate
 
     # Parse `text` and return it with ruby character markup
     def parse(text)
-      first = @options[:delimiters][0]
-      last  = @options[:delimiters][-1]
-
-      first = /#{'\\' + first}/ if RESERVED.include? first
-      last  = /#{'\\' + last}/  if RESERVED.include? last
+      first = Regexp.escape(@options[:delimiters][0])
+      last  = Regexp.escape(@options[:delimiters][-1])
 
       text.gsub(/(\p{Han}+)(#{first})([\p{Hiragana}\p{Katakana}]+)(#{last})/) { |match| @formatter.format($~) }
     end
