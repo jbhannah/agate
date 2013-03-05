@@ -1,4 +1,4 @@
-# Agate
+# [Agate](http://en.wikipedia.org/w/index.php?title=Ruby_character&oldid=540994629#History)
 
 [![Build Status](https://travis-ci.org/jbhannah/agate.png?branch=master)](https://travis-ci.org/jbhannah/agate)
 [![Dependency Status](https://gemnasium.com/jbhannah/agate.png)](https://gemnasium.com/jbhannah/agate)
