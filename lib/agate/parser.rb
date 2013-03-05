@@ -10,7 +10,7 @@ module Agate
     end
 
     def parse
-      @parsed_text ||= @text.gsub(/(\p{Han}+)【([\p{Hiragana}\p{Katakana}]+)】/, '<ruby>\1<rt>\2</rt></ruby>')
+      @parsed_text ||= @text.gsub(/(\p{Han}+)(【)([\p{Hiragana}\p{Katakana}]+)(】)/, '<ruby>\1<rp>\2</rp><rt>\3</rt><rp>\4</rp></ruby>')
     end
   end
 end
