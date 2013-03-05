@@ -11,7 +11,12 @@ Wrap ruby characters (e.g. furigana, Pinyin, Zhuyin) in text with the
 ## Usage
 
 ```ruby
-a = Agate::Parser.new
+options = {
+  # can be any single character or pair of characters which surround ruby characters in text to parse
+  :delimiters => "【】" # default delimiters
+}
+
+a = Agate::Parser.new(options) # call without arguments to use defaults
 a.parse("勉【べん】強【きょう】します")
 ```
 
