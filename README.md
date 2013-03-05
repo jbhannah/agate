@@ -15,7 +15,7 @@ a = Agate::Parser.new("勉【べん】強【きょう】します")
 a.parse
 ```
 
-becomes
+results in
 
 ```html
 <ruby>勉<rt>べん</rt></ruby><ruby>強<rt>きょう</rt></ruby>します
