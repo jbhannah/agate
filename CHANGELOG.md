@@ -1,3 +1,11 @@
+# 0.3.4 / 2013-03-05
+
+ * Fixed Rubinius compatibility (#10).
+
+# 0.3.3 / 2013-03-05
+
+ * Fixed Ruby 1.9 compatibility (#9).
+
 # 0.3.2 / 2013-03-05
 
  * Added CHANGELOG.
