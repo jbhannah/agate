@@ -11,7 +11,22 @@ Wrap ruby characters (e.g. furigana, Pinyin, Zhuyin) in text with the
 
 ## Usage
 
+Install the gem with
+
+    gem install agate
+
+or add it to your `Gemfile`:
+
 ```ruby
+gem "agate", "~> 0.3.2"
+```
+
+To markup a simple string with delimited furigana:
+
+```ruby
+require "rubygems"
+require "agate"
+
 options = {
   # can be any single character or pair of characters which surround ruby characters in text to parse
   :delimiters => "【】" # default delimiters
