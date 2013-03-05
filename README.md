@@ -19,7 +19,7 @@ Install the gem with
 or add it to your `Gemfile`:
 
 ```ruby
-gem "agate", "~> 0.3.2"
+gem "agate", "~> 0.3.4"
 ```
 
 To markup a simple string with delimited furigana:
