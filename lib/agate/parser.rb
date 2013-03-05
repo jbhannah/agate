@@ -3,7 +3,8 @@ module Agate
   class Parser
     # Default options
     DEFAULTS = {
-      :delimiters => "【】"
+      :delimiters => "【】",
+      :formatter  => :html
     }
 
     # Regexp reserved characters to escape when matching
@@ -11,6 +12,13 @@ module Agate
 
     def initialize(options = {})
       @options = DEFAULTS.merge(options)
+
+      @formatter = case @options[:formatter]
+        when :html
+          Agate::Formatter::HTML.new
+        else
+          Agate::Formatter::HTML.new
+        end
     end
 
     # Parse `text` and return it with ruby character markup
@@ -21,8 +29,7 @@ module Agate
       first = /#{'\\' + first}/ if RESERVED.include? first
       last  = /#{'\\' + last}/  if RESERVED.include? last
 
-      text.gsub(/(\p{Han}+)(#{first})([\p{Hiragana}\p{Katakana}]+)(#{last})/,
-        '<ruby>\1<rp>\2</rp><rt>\3</rt><rp>\4</rp></ruby>')
+      text.gsub(/(\p{Han}+)(#{first})([\p{Hiragana}\p{Katakana}]+)(#{last})/) { |match| @formatter.format($~) }
     end
   end
 end
