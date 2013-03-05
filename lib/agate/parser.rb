@@ -23,8 +23,8 @@ module Agate
 
     # Parse `text` and return it with ruby character markup
     def parse(text)
-      first = @options[:delimiters].chars.first
-      last  = @options[:delimiters].chars.last
+      first = @options[:delimiters][0]
+      last  = @options[:delimiters][-1]
 
       first = /#{'\\' + first}/ if RESERVED.include? first
       last  = /#{'\\' + last}/  if RESERVED.include? last
