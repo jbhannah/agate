@@ -33,4 +33,26 @@ describe Agate::Parser do
       end
     end
   end
+
+  context "with formatter" do
+    context "HTML" do
+      let(:agate)       { Agate::Parser.new(:formatter => :html) }
+      let(:text)        { "勉【べん】強【きょう】します" }
+      let(:parsed_text) { "<ruby>勉<rp>【</rp><rt>べん</rt><rp>】</rp></ruby><ruby>強<rp>【</rp><rt>きょう</rt><rp>】</rp></ruby>します" }
+
+      it "parses delimited text and turns it into HTML" do
+        agate.parse(text).should eql(parsed_text)
+      end
+    end
+
+    context "not matching an available formatter" do
+      let(:agate)       { Agate::Parser.new(:formatter => :foobar) }
+      let(:text)        { "勉【べん】強【きょう】します" }
+      let(:parsed_text) { "<ruby>勉<rp>【</rp><rt>べん</rt><rp>】</rp></ruby><ruby>強<rp>【</rp><rt>きょう</rt><rp>】</rp></ruby>します" }
+
+      it "parses delimited text and turns it into HTML" do
+        agate.parse(text).should eql(parsed_text)
+      end
+    end
+  end
 end
