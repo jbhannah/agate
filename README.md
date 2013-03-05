@@ -1,29 +1,6 @@
 # Agate
 
-TODO: Write a gem description
+Wrap ruby characters (e.g. furigana, Pinyin, Zhuyin) in text with the
+[HTML `ruby` element][].
 
-## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'agate'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install agate
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+[HTML `ruby` element]: http://www.w3.org/TR/html5/text-level-semantics.html#the-ruby-element
