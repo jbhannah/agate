@@ -11,8 +11,8 @@ Wrap ruby characters (e.g. furigana, Pinyin, Zhuyin) in text with the
 ## Usage
 
 ```ruby
-a = Agate::Parser.new("勉【べん】強【きょう】します")
-a.parse
+a = Agate::Parser.new
+a.parse("勉【べん】強【きょう】します")
 ```
 
 results in
