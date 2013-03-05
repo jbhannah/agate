@@ -21,4 +21,11 @@ results in
 <ruby>勉<rt>べん</rt></ruby><ruby>強<rt>きょう</rt></ruby>します
 ```
 
+It's highly recommended to read the W3C's documentation on the [HTML
+`ruby` element][] to understand the usage of this element. There is a
+[CSS workaround][] available that enables the display of ruby characters
+in all modern browsers, but it's up to you to test all cases where you
+intend to use the `ruby` element.
+
 [HTML `ruby` element]: http://www.w3.org/TR/html5/text-level-semantics.html#the-ruby-element
+[CSS workaround]: http://web.nickshanks.com/stylesheets/ruby.css
