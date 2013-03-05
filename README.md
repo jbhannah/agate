@@ -27,6 +27,10 @@ results in
 <ruby>勉<rp>【</rp><rt>べん</rt><rp>】</rp></ruby><ruby>強<rp>【</rp><rt>きょう</rt><rp>】</rp></ruby>します
 ```
 
+which (in your browser) looks like
+
+> <ruby>勉<rp>【</rp><rt>べん</rt><rp>】</rp></ruby><ruby>強<rp>【</rp><rt>きょう</rt><rp>】</rp></ruby>します
+
 It's highly recommended to read the W3C's documentation on the [HTML
 `ruby` element][] to understand the usage of this element. There is a
 [CSS workaround][] available that enables the display of ruby characters
