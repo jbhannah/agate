@@ -1,5 +1,6 @@
 # [Agate](http://en.wikipedia.org/w/index.php?title=Ruby_character&oldid=540994629#History)
 
+[![Gem Version](https://badge.fury.io/rb/agate.png)](http://badge.fury.io/rb/agate)
 [![Build Status](https://travis-ci.org/jbhannah/agate.png?branch=master)](https://travis-ci.org/jbhannah/agate)
 [![Dependency Status](https://gemnasium.com/jbhannah/agate.png)](https://gemnasium.com/jbhannah/agate)
 [![Code Climate](https://codeclimate.com/github/jbhannah/agate.png)](https://codeclimate.com/github/jbhannah/agate)
