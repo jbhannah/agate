@@ -23,7 +23,7 @@ a.parse("勉【べん】強【きょう】します")
 results in
 
 ```html
-<ruby>勉<rt>べん</rt></ruby><ruby>強<rt>きょう</rt></ruby>します
+<ruby>勉<rp>【</rp><rt>べん</rt><rp>】</rp></ruby><ruby>強<rp>【</rp><rt>きょう</rt><rp>】</rp></ruby>します
 ```
 
 It's highly recommended to read the W3C's documentation on the [HTML
