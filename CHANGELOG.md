@@ -1,3 +1,7 @@
+# 0.4.0 / 2013-03-05
+
+ * Added basic command-line interface.
+
 # 0.3.4 / 2013-03-05
 
  * Fixed Rubinius compatibility (#10).
