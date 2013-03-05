@@ -23,7 +23,8 @@ module Agate
       first = Regexp.escape(@options[:delimiters][0])
       last  = Regexp.escape(@options[:delimiters][-1])
 
-      text.gsub(/(\p{Han}+)(#{first})([\p{Hiragana}\p{Katakana}]+)(#{last})/) { |match| @formatter.format($~) }
+      expr = /(\p{Han}+)(#{first})([\p{Hiragana}\p{Katakana}]+)(#{last})/u
+      text.gsub(expr) { |match| @formatter.format($~) }
     end
   end
 end
