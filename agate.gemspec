@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["jesse@jbhannah.net"]
   spec.description   = %q{Wrap ruby characters (e.g. furigana, Pinyin, Zhuyin) in text with the HTML ruby element.}
   spec.summary       = %q{Wrap ruby characters (e.g. furigana, Pinyin, Zhuyin) in text with the HTML ruby element.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/jbhannah/agate"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
