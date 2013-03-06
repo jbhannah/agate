@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 module Agate
   module Formatter
     # Formats text using HTML5 ruby tags, turning

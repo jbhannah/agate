@@ -1,3 +1,7 @@
+# 0.4.1 / 2013-03-06
+
+ * Documentation fixes.
+
 # 0.4.0 / 2013-03-05
 
  * Added basic command-line interface.
