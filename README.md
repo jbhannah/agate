@@ -1,10 +1,10 @@
 # [Agate](http://en.wikipedia.org/w/index.php?title=Ruby_character&oldid=540994629#History)
 
-[![Gem Version](https://badge.fury.io/rb/agate.png)](http://badge.fury.io/rb/agate)
-[![Build Status](https://travis-ci.org/jbhannah/agate.png?branch=master)](https://travis-ci.org/jbhannah/agate)
+[![Gem Version](https://badge.fury.io/rb/agate.svg)](http://badge.fury.io/rb/agate)
+[![Build Status](https://travis-ci.org/jbhannah/agate.svg?branch=master)](https://travis-ci.org/jbhannah/agate)
 [![Dependency Status](https://gemnasium.com/jbhannah/agate.png)](https://gemnasium.com/jbhannah/agate)
-[![Code Climate](https://codeclimate.com/github/jbhannah/agate.png)](https://codeclimate.com/github/jbhannah/agate)
-[![Coverage Status](https://coveralls.io/repos/jbhannah/agate/badge.png?branch=master)](https://coveralls.io/r/jbhannah/agate)
+[![Code Climate](https://codeclimate.com/github/jbhannah/agate/badges/gpa.svg)](https://codeclimate.com/github/jbhannah/agate)
+[![Coverage Status](https://img.shields.io/coveralls/jbhannah/agate.svg)](https://coveralls.io/r/jbhannah/agate?branch=master)
 
 Wrap ruby characters (currently only furigana) in text with the
 [HTML5 `ruby` element][]. **Requires Ruby 1.9 or later (or compatible
