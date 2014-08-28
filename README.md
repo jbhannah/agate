@@ -7,7 +7,7 @@
 [![Coverage Status](https://coveralls.io/repos/jbhannah/agate/badge.png?branch=master)](https://coveralls.io/r/jbhannah/agate)
 
 Wrap ruby characters (currently only furigana) in text with the
-[HTML5 `ruby` element][]. **Requires Ruby 1.9 or later (or compabible
+[HTML5 `ruby` element][]. **Requires Ruby 1.9 or later (or compatible
 engine).**
 
 ## Usage
