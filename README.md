@@ -11,6 +11,7 @@ Ruby 1.9 or later (or compatible engine).**
 
 ## Formatters
 
+ * Plain text (echoes back passed text)
  * [HTML5 (`ruby` element)][]
 
 ## Usage
@@ -34,8 +35,8 @@ require "agate"
 options = {
   # can be any single character or pair of characters which surround ruby characters in text to parse
   :delimiters => "【】" # default delimiters
-  # markup formatter to use (options: :html)
-  :formatter => :html # default (and currently only) formatter
+  # markup formatter to use (options: :plain (default), :html)
+  :formatter => :html
 }
 
 a = Agate::Parser.new(options) # call without arguments to use defaults
