@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Agate::VERSION
   spec.authors       = ["Jesse B. Hannah"]
   spec.email         = ["jesse@jbhannah.net"]
-  spec.description   = %q{Wrap ruby characters (currently only furigana) in text with the HTML5 ruby element.}
-  spec.summary       = %q{Wrap ruby characters (currently only furigana) in text with the HTML5 ruby element.}
+  spec.description   = %q{Format ruby characters (currently only furigana) in text for display.}
+  spec.summary       = %q{Format ruby characters (currently only furigana) in text for display.}
   spec.homepage      = "https://github.com/jbhannah/agate"
   spec.license       = "MIT"
 
