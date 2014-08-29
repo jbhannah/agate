@@ -6,9 +6,12 @@
 [![Code Climate](https://codeclimate.com/github/jbhannah/agate/badges/gpa.svg)](https://codeclimate.com/github/jbhannah/agate)
 [![Coverage Status](https://img.shields.io/coveralls/jbhannah/agate.svg)](https://coveralls.io/r/jbhannah/agate?branch=master)
 
-Wrap ruby characters (currently only furigana) in text with the
-[HTML5 `ruby` element][]. **Requires Ruby 1.9 or later (or compatible
-engine).**
+Format ruby characters (currently only furigana) in text for display. **Requires
+Ruby 1.9 or later (or compatible engine).**
+
+## Formatters
+
+ * [HTML5 (`ruby` element)][]
 
 ## Usage
 
@@ -55,5 +58,5 @@ It's highly recommended to read the W3C's documentation on the [HTML5
 in all modern browsers, but it's up to you to test all cases where you
 intend to use the `ruby` element.
 
-[HTML5 `ruby` element]: http://www.w3.org/TR/html5/text-level-semantics.html#the-ruby-element
+[HTML5 (`ruby` element)]: http://www.w3.org/TR/html5/text-level-semantics.html#the-ruby-element
 [CSS workaround]: http://web.nickshanks.com/stylesheets/ruby.css
