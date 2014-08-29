@@ -8,7 +8,7 @@ describe Agate::Parser do
     let(:parsed_text) { "<ruby>勉<rp>【</rp><rt>べん</rt><rp>】</rp></ruby><ruby>強<rp>【</rp><rt>きょう</rt><rp>】</rp></ruby>します" }
 
     it "parses delimited text and turns it into HTML" do
-      agate.parse(text).should eql(parsed_text)
+      expect(agate.parse(text)).to eql(parsed_text)
     end
   end
 
@@ -19,7 +19,7 @@ describe Agate::Parser do
       let(:parsed_text) { "<ruby>勉<rp>(</rp><rt>べん</rt><rp>)</rp></ruby><ruby>強<rp>(</rp><rt>きょう</rt><rp>)</rp></ruby>します" }
 
       it "parses delimited text and turns it into HTML" do
-        agate.parse(text).should eql(parsed_text)
+        expect(agate.parse(text)).to eql(parsed_text)
       end
     end
 
@@ -29,7 +29,7 @@ describe Agate::Parser do
       let(:parsed_text) { "<ruby>勉<rp>@</rp><rt>べん</rt><rp>@</rp></ruby><ruby>強<rp>@</rp><rt>きょう</rt><rp>@</rp></ruby>します" }
 
       it "parses delimited text and turns it into HTML" do
-        agate.parse(text).should eql(parsed_text)
+        expect(agate.parse(text)).to eql(parsed_text)
       end
     end
   end
@@ -41,7 +41,7 @@ describe Agate::Parser do
       let(:parsed_text) { "<ruby>勉<rp>【</rp><rt>べん</rt><rp>】</rp></ruby><ruby>強<rp>【</rp><rt>きょう</rt><rp>】</rp></ruby>します" }
 
       it "parses delimited text and turns it into HTML" do
-        agate.parse(text).should eql(parsed_text)
+        expect(agate.parse(text)).to eql(parsed_text)
       end
     end
 
@@ -51,7 +51,7 @@ describe Agate::Parser do
       let(:parsed_text) { "<ruby>勉<rp>【</rp><rt>べん</rt><rp>】</rp></ruby><ruby>強<rp>【</rp><rt>きょう</rt><rp>】</rp></ruby>します" }
 
       it "parses delimited text and turns it into HTML" do
-        agate.parse(text).should eql(parsed_text)
+        expect(agate.parse(text)).to eql(parsed_text)
       end
     end
   end
