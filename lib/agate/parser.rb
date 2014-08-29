@@ -4,7 +4,7 @@ module Agate
     # Default options
     DEFAULTS = {
       :delimiters => "【】",
-      :formatter  => :html
+      :formatter  => :plain
     }
 
     def initialize(options = {})
@@ -13,8 +13,10 @@ module Agate
       @formatter = case @options[:formatter]
         when :html
           Agate::Formatter::HTML.new
+        when :plain
+          Agate::Formatter::Plain.new
         else
-          Agate::Formatter::HTML.new
+          Agate::Formatter::Plain.new
         end
     end
 

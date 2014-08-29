@@ -5,10 +5,9 @@ RSpec.describe Agate::Parser do
   context "with defaults" do
     let(:agate)       { Agate::Parser.new }
     let(:text)        { "勉【べん】強【きょう】します" }
-    let(:parsed_text) { "<ruby>勉<rp>【</rp><rt>べん</rt><rp>】</rp></ruby><ruby>強<rp>【</rp><rt>きょう</rt><rp>】</rp></ruby>します" }
 
-    it "parses delimited text and turns it into HTML" do
-      expect(agate.parse(text)).to eql(parsed_text)
+    it "parses delimited text and echoes it back" do
+      expect(agate.parse(text)).to eql(text)
     end
   end
 
@@ -16,20 +15,18 @@ RSpec.describe Agate::Parser do
     context "from regexp-reserved character list" do
       let(:agate) { Agate::Parser.new(:delimiters => "()") }
       let(:text)  { "勉(べん)強(きょう)します" }
-      let(:parsed_text) { "<ruby>勉<rp>(</rp><rt>べん</rt><rp>)</rp></ruby><ruby>強<rp>(</rp><rt>きょう</rt><rp>)</rp></ruby>します" }
 
-      it "parses delimited text and turns it into HTML" do
-        expect(agate.parse(text)).to eql(parsed_text)
+      it "parses delimited text and echoes it back" do
+        expect(agate.parse(text)).to eql(text)
       end
     end
 
     context "arbitrary" do
       let(:agate) { Agate::Parser.new(:delimiters => "@") }
       let(:text)  { "勉@べん@強@きょう@します" }
-      let(:parsed_text) { "<ruby>勉<rp>@</rp><rt>べん</rt><rp>@</rp></ruby><ruby>強<rp>@</rp><rt>きょう</rt><rp>@</rp></ruby>します" }
 
-      it "parses delimited text and turns it into HTML" do
-        expect(agate.parse(text)).to eql(parsed_text)
+      it "parses delimited text and echoes it back" do
+        expect(agate.parse(text)).to eql(text)
       end
     end
   end
@@ -40,7 +37,7 @@ RSpec.describe Agate::Parser do
       let(:text)        { "勉【べん】強【きょう】します" }
       let(:parsed_text) { "<ruby>勉<rp>【</rp><rt>べん</rt><rp>】</rp></ruby><ruby>強<rp>【</rp><rt>きょう</rt><rp>】</rp></ruby>します" }
 
-      it "parses delimited text and turns it into HTML" do
+      it "parses delimited text and formats it with the specified formatter" do
         expect(agate.parse(text)).to eql(parsed_text)
       end
     end
@@ -48,10 +45,9 @@ RSpec.describe Agate::Parser do
     context "not matching an available formatter" do
       let(:agate)       { Agate::Parser.new(:formatter => :foobar) }
       let(:text)        { "勉【べん】強【きょう】します" }
-      let(:parsed_text) { "<ruby>勉<rp>【</rp><rt>べん</rt><rp>】</rp></ruby><ruby>強<rp>【</rp><rt>きょう</rt><rp>】</rp></ruby>します" }
 
-      it "parses delimited text and turns it into HTML" do
-        expect(agate.parse(text)).to eql(parsed_text)
+      it "parses delimited text and echoes it back" do
+        expect(agate.parse(text)).to eql(text)
       end
     end
   end
