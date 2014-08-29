@@ -15,11 +15,11 @@ module Agate
 
       @formatter = case @options[:formatter]
         when :html
-          Agate::Formatter::HTML.new
+          Agate::Formatter::HTML
         when :plain
-          Agate::Formatter::Plain.new
+          Agate::Formatter::Plain
         else
-          Agate::Formatter::Plain.new
+          Agate::Formatter::Plain
         end
     end
 

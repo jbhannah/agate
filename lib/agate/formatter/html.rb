@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+require 'singleton'
+
 module Agate
   module Formatter
     # Formats text using HTML5 ruby tags, turning
@@ -12,8 +14,10 @@ module Agate
     # which can then be rendered by some web browsers or formatted
     # using CSS.
     class HTML
+      include Singleton
+
       # Turns a regexp match object into a formatted string with ruby characters
-      def format(match)
+      def self.format(match)
         "<ruby>#{match[1]}<rp>#{match[2]}</rp><rt>#{match[3]}</rt><rp>#{match[4]}</rp></ruby>"
       end
     end
