@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 require "spec_helper"
+require "agate/parser"
 
 RSpec.describe Agate::Parser do
   context "with defaults" do

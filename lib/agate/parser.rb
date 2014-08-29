@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+require "agate/formatter/html"
+require "agate/formatter/plain"
+
 module Agate
   class Parser
     # Default options

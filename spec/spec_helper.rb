@@ -9,7 +9,6 @@ RSpec.configure do |config|
   require "coveralls"
   Coveralls.wear!
 
-  require "agate"
   config.raise_errors_for_deprecations!
 
   # Run specs in random order to surface order dependencies. If you find an
