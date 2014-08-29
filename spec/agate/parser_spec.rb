@@ -34,12 +34,12 @@ RSpec.describe Agate::Parser do
 
   context "with formatter" do
     context "HTML" do
-      let(:agate)       { Agate::Parser.new(:formatter => :html) }
-      let(:text)        { "勉【べん】強【きょう】します" }
-      let(:parsed_text) { "<ruby>勉<rp>【</rp><rt>べん</rt><rp>】</rp></ruby><ruby>強<rp>【</rp><rt>きょう</rt><rp>】</rp></ruby>します" }
+      let(:agate)          { Agate::Parser.new(:formatter => :html) }
+      let(:text)           { "勉【べん】強【きょう】します" }
+      let(:formatted_text) { "<ruby>勉<rp>【</rp><rt>べん</rt><rp>】</rp></ruby><ruby>強<rp>【</rp><rt>きょう</rt><rp>】</rp></ruby>します" }
 
       it "parses delimited text and formats it with the specified formatter" do
-        expect(agate.parse(text)).to eql(parsed_text)
+        expect(agate.parse(text)).to eql(formatted_text)
       end
     end
 
