@@ -4,8 +4,8 @@ require "agate/parser"
 
 RSpec.describe Agate::Parser do
   context "with defaults" do
-    let(:agate)       { Agate::Parser.new }
-    let(:text)        { "勉【べん】強【きょう】します" }
+    let(:agate) { Agate::Parser.new }
+    let(:text)  { "勉【べん】強【きょう】します" }
 
     it "parses delimited text and echoes it back" do
       expect(agate.parse(text)).to eql(text)
@@ -44,8 +44,8 @@ RSpec.describe Agate::Parser do
     end
 
     context "not matching an available formatter" do
-      let(:agate)       { Agate::Parser.new(:formatter => :foobar) }
-      let(:text)        { "勉【べん】強【きょう】します" }
+      let(:agate) { Agate::Parser.new(:formatter => :foobar) }
+      let(:text)  { "勉【べん】強【きょう】します" }
 
       it "parses delimited text and echoes it back" do
         expect(agate.parse(text)).to eql(text)
