@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 require "spec_helper"
 
-describe Agate::Parser do
+RSpec.describe Agate::Parser do
   context "with defaults" do
     let(:agate)       { Agate::Parser.new }
     let(:text)        { "勉【べん】強【きょう】します" }
