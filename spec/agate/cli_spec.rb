@@ -9,6 +9,7 @@ RSpec.describe Agate::CLI do
   context "with help option" do
     it "shows the help message and exits" do
       stub_const("Agate::CLI::ARGV", ["-h"])
+
       text = <<-eos
 Usage: agate [options] text-to-convert
 
@@ -18,13 +19,29 @@ Options:
     -h, --help                       Show this message
     -v, --version                    Show version
 eos
-      # expect { load cli }.to raise_error SystemExit
+
       expect do
         begin
           load cli
         rescue SystemExit
         end
       end.to output(text).to_stdout
+    end
+  end
+
+  context "with version option" do
+    it "shows the version and exits" do
+      version = ["1", "2", "3"]
+
+      stub_const("Agate::CLI::ARGV", ["-v"])
+      stub_const("Agate::VERSION", version)
+
+      expect do
+        begin
+          load cli
+        rescue SystemExit
+        end
+      end.to output(version.join('.') + "\n").to_stdout
     end
   end
 
