@@ -1,3 +1,8 @@
+# 0.5.0 / 2014-08-30
+
+ * Plaintext parser.
+ * Structural cleanup.
+
 # 0.4.1 / 2013-03-06
 
  * Documentation fixes.
