@@ -5,8 +5,6 @@ require 'optparse'
 
 module Agate
   class CLI
-    # include Singleton
-
     def initialize
       @options = {}
     end
@@ -30,7 +28,7 @@ module Agate
           @options[:delimiters] = delims
         end
 
-        o.on("-f", "--formatter FORMAT", "Specify a formatter to use (default/fallback: HTML)") do |format|
+        o.on("-f", "--formatter FORMAT", "Specify a formatter to use (default/fallback: plain text)") do |format|
           @options[:formatter] = format.to_sym
         end
 
