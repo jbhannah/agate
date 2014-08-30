@@ -1,3 +1,7 @@
+# 0.5.1 / 2014-08-30
+
+ * Require Ruby 1.9 or greater.
+
 # 0.5.0 / 2014-08-30
 
  * Plaintext parser.
