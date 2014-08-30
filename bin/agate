@@ -2,4 +2,4 @@
 
 require 'agate/cli'
 
-Agate::CLI.instance.start
+puts Agate::CLI.new.parse

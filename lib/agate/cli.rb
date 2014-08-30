@@ -5,41 +5,41 @@ require 'optparse'
 
 module Agate
   class CLI
-    include Singleton
+    # include Singleton
 
     def initialize
       @options = {}
     end
 
-    def start
+    def parse
       parse_opts
 
       agate = Agate::Parser.new(@options)
-      puts agate.parse(ARGV.join)
+      agate.parse(ARGV.join)
     end
 
   private
     def parse_opts
-      opts = OptionParser.new do |opts|
-        opts.banner = "Usage: agate [options] text-to-convert"
+      opts = OptionParser.new do |o|
+        o.banner = "Usage: agate [options] text-to-convert"
 
-        opts.separator ""
-        opts.separator "Options:"
+        o.separator ""
+        o.separator "Options:"
 
-        opts.on("-d", "--delimiters DELIMITERS", "Specify custom delimiters for ruby text (default: 【】)") do |delims|
+        o.on("-d", "--delimiters DELIMITERS", "Specify custom delimiters for ruby text (default: 【】)") do |delims|
           @options[:delimiters] = delims
         end
 
-        opts.on("-f", "--formatter FORMAT", "Specify a formatter to use (default/fallback: HTML)") do |format|
+        o.on("-f", "--formatter FORMAT", "Specify a formatter to use (default/fallback: HTML)") do |format|
           @options[:formatter] = format.to_sym
         end
 
-        opts.on_tail("-h", "--help", "Show this message") do
-          puts opts
+        o.on_tail("-h", "--help", "Show this message") do
+          puts o
           exit
         end
 
-        opts.on_tail("-v", "--version", "Show version") do
+        o.on_tail("-v", "--version", "Show version") do
           puts Agate::VERSION
           exit
         end
