@@ -3,14 +3,14 @@ require "spec_helper"
 require "agate/cli"
 
 RSpec.describe Agate::CLI do
-  let(:cli)  { Agate::CLI.new }
+  let(:cli)  { File.join(File.expand_path(File.dirname(__FILE__)), "..", "..", "bin", "agate") }
   let(:text) { "勉【べん】強【きょう】します" }
 
   context "with defaults" do
 
     it "parses delimited text and echoes it back" do
-      stub_const("Agate::CLI::ARGV", [text])
-      expect(cli.parse).to eql(text)
+      stub_const("ARGV", [text])
+      expect { load cli }.to output(text + "\n").to_stdout
     end
   end
 
@@ -19,7 +19,7 @@ RSpec.describe Agate::CLI do
 
     it "parses delimited text and echoes it back" do
       stub_const("Agate::CLI::ARGV", ["-d", "\"()\"", text])
-      expect(cli.parse).to eql(text)
+      expect { load cli }.to output(text + "\n").to_stdout
     end
   end
 
@@ -28,7 +28,7 @@ RSpec.describe Agate::CLI do
 
     it "parses delimited text and echoes it back" do
       stub_const("Agate::CLI::ARGV", ["-f", "html", text])
-      expect(cli.parse).to eql(formatted_text)
+      expect { load cli }.to output(formatted_text + "\n").to_stdout
     end
   end
 end
