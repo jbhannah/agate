@@ -38,7 +38,7 @@ module Agate
         end
 
         o.on_tail("-v", "--version", "Show version") do
-          puts Agate::VERSION
+          puts Agate::VERSION.join('.')
           exit
         end
       end

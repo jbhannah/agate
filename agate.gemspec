@@ -5,7 +5,7 @@ require 'agate/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "agate"
-  spec.version       = Agate::VERSION
+  spec.version       = Agate::VERSION.join('.')
   spec.authors       = ["Jesse B. Hannah"]
   spec.email         = ["jesse@jbhannah.net"]
   spec.description   = %q{Format ruby characters (currently only furigana) in text for display.}
