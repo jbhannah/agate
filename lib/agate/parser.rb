@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 require "agate/formatter/html"
 require "agate/formatter/plain"
+require "agate/formatter/strip"
 
 module Agate
   class Parser
@@ -18,6 +19,8 @@ module Agate
           Agate::Formatter::HTML
         when :plain
           Agate::Formatter::Plain
+        when :strip
+          Agate::Formatter::Strip
         else
           Agate::Formatter::Plain
         end
