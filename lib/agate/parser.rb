@@ -14,16 +14,8 @@ module Agate
     def initialize(options = {})
       @options = DEFAULTS.merge(options)
 
-      @formatter = case @options[:formatter]
-        when :html
-          Agate::Formatter::HTML
-        when :plain
-          Agate::Formatter::Plain
-        when :strip
-          Agate::Formatter::Strip
-        else
-          Agate::Formatter::Plain
-        end
+      @formatter   = Agate.retrieve_formatter(@options[:formatter])
+      @formatter ||= Agate::Formatter::Plain
     end
 
     # Parse `text` and return it with ruby character markup

@@ -23,3 +23,5 @@ module Agate
     end
   end
 end
+
+Agate.register_formatter(:html, Agate::Formatter::HTML)

@@ -16,3 +16,5 @@ module Agate
     end
   end
 end
+
+Agate.register_formatter(:plain, Agate::Formatter::Plain)
