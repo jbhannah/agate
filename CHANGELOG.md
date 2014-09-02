@@ -1,3 +1,7 @@
+# 0.6.0 / 2014-09-02
+
+ * Formatter to strip ruby text from a passed string.
+
 # 0.5.1 / 2014-08-30
 
  * Require Ruby 1.9 or greater.
