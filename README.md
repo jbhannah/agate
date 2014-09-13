@@ -12,7 +12,8 @@ Ruby 1.9 or later (or compatible engine).**
 ## Formatters
 
  * Plain text (echoes back passed text)
- * [HTML5 (`ruby` element)][]
+ * [HTML5 (`ruby` element)][h5]
+ * Strip ruby text
 
 ## Usage
 
@@ -35,7 +36,7 @@ require "agate"
 options = {
   # can be any single character or pair of characters which surround ruby characters in text to parse
   :delimiters => "【】" # default delimiters
-  # markup formatter to use (options: :plain (default), :html)
+  # markup formatter to use (options: :plain (default), :html, :strip)
   :formatter => :html
 }
 
@@ -54,10 +55,10 @@ which (in your browser) looks like
 > <ruby>勉<rp>【</rp><rt>べん</rt><rp>】</rp></ruby><ruby>強<rp>【</rp><rt>きょう</rt><rp>】</rp></ruby>します
 
 It's highly recommended to read the W3C's documentation on the [HTML5
-`ruby` element][] to understand the usage of this element. There is a
-[CSS workaround][] available that enables the display of ruby characters
+`ruby` element][h5] to understand the usage of this element. There is a
+[CSS workaround][css] available that enables the display of ruby characters
 in all modern browsers, but it's up to you to test all cases where you
 intend to use the `ruby` element.
 
-[HTML5 (`ruby` element)]: http://www.w3.org/TR/html5/text-level-semantics.html#the-ruby-element
-[CSS workaround]: http://web.nickshanks.com/stylesheets/ruby.css
+[h5]: http://www.w3.org/TR/html5/text-level-semantics.html#the-ruby-element
+[css]: http://web.nickshanks.com/stylesheets/ruby.css
