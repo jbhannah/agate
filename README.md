@@ -1,10 +1,10 @@
 # [Agate](http://en.wikipedia.org/w/index.php?title=Ruby_character&oldid=540994629#History)
 
-[![Gem Version](https://badge.fury.io/rb/agate.svg)](http://badge.fury.io/rb/agate)
-[![Build Status](https://travis-ci.org/jbhannah/agate.svg?branch=master)](https://travis-ci.org/jbhannah/agate)
-[![Dependency Status](https://gemnasium.com/jbhannah/agate.png)](https://gemnasium.com/jbhannah/agate)
-[![Code Climate](https://codeclimate.com/github/jbhannah/agate/badges/gpa.svg)](https://codeclimate.com/github/jbhannah/agate)
-[![Coverage Status](https://img.shields.io/coveralls/jbhannah/agate.svg)](https://coveralls.io/r/jbhannah/agate?branch=master)
+[![Gem Version](http://img.shields.io/gem/v/agate.svg?style=flat)](http://rubygems.org/gems/agate)
+[![Build Status](http://img.shields.io/travis/jbhannah/agate.svg?style=flat)](https://travis-ci.org/jbhannah/agate)
+[![Dependency Status](http://img.shields.io/gemnasium/jbhannah/agate.svg?style=flat)](https://gemnasium.com/jbhannah/agate)
+[![Code Climate](http://img.shields.io/codeclimate/github/jbhannah/agate.svg?style=flat)](https://codeclimate.com/github/jbhannah/agate)
+[![Coverage Status](http://img.shields.io/coveralls/jbhannah/agate.svg?style=flat)](https://coveralls.io/r/jbhannah/agate?branch=master)
 
 Format ruby characters (currently only furigana) in text for display. **Requires
 Ruby 1.9 or later (or compatible engine).**
