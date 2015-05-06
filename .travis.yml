@@ -13,3 +13,5 @@ rvm:
   - rbx-2.2.10
   - rbx-2.4.1
   - rbx-2.5.3
+env:
+  - JRUBY_OPTS="-Xcli.debug=true --debug"
