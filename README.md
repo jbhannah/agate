@@ -5,7 +5,7 @@
 [![Dependency Status](http://img.shields.io/gemnasium/jbhannah/agate.svg?style=flat)](https://gemnasium.com/jbhannah/agate)
 [![Code Climate](http://img.shields.io/codeclimate/github/jbhannah/agate.svg?style=flat)](https://codeclimate.com/github/jbhannah/agate)
 [![Coverage Status](http://img.shields.io/coveralls/jbhannah/agate.svg?style=flat)](https://coveralls.io/r/jbhannah/agate?branch=master)
-[![Huboard](https://img.shields.io/github/issues/jbhannah/agate.svg?style=flat)](https://huboard.com/jbhannah/agate/)
+[![Issues](https://img.shields.io/github/issues/jbhannah/agate.svg?style=flat)](https://github.com/jbhannah/agate/issues)
 [![Gitter](https://img.shields.io/badge/gitter-join%20chat-brightgreen.svg?style=flat)](https://gitter.im/jbhannah/agate?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 Format ruby characters (currently only furigana) in text for display. **Requires
