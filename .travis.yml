@@ -4,14 +4,14 @@ rvm:
   - 1.9.2
   - 1.9.3
   - 2.0.0
-  - 2.1.6
-  - 2.2.2
+  - 2.1.7
+  - 2.2.3
   - ruby-head
   - jruby-19mode
-  - jruby-9.0.0.0.pre2
+  - jruby-9.0.0.0
   - jruby-head
   - rbx-2.2.10
   - rbx-2.4.1
-  - rbx-2.5.3
+  - rbx-2.5.8
 env:
   - JRUBY_OPTS="-Xcli.debug=true --debug"
